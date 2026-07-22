@@ -14,9 +14,9 @@ const HeaderSearch = ({
   const {setSearchTerm, searchTerm} = useSearchContext();  
 
   return(
-    <div className={`flex justify-center items-center py-2 relative  ${className || ""}`}>
-      <Image src={NAV_LOGO} alt="Nav Logo" height={30} className="col-span-2 absolute -left-40"/>
-      <MeliInput placeholder="Never stop searching..." className="w-2xl h-8" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+    <div className={`flex justify-center items-center py-2 relative   ${className || ""}`}>
+      <Image src={NAV_LOGO} alt="Nav Logo" height={30} className="col-span-2 sm:absolute -left-40 mr-5 sm:mr-0"/>
+      <MeliInput placeholder="Never stop searching..." className="min-w-0 sm:min-w-xl h-8" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
       <MeliButton icon={<SearchIcon />} className="p-0 h-8 w-8"/>
     </div>
   )
